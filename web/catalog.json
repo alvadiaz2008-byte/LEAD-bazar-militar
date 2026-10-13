@@ -163,7 +163,7 @@
       "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=900&q=80",
       "https://images.unsplash.com/photo-1544022613-e87caecea06c?auto=format&fit=crop&w=900&q=80"
     ],
-    "featured": true,
+    "featured": false,
     "variants": [
       { "size": "S", "color": "Negro", "hex": "#1A1A1A", "stock": 1 },
       { "size": "S", "color": "Olivo", "hex": "#4B5320", "stock": 1 },
@@ -213,7 +213,7 @@
     "images": [
       "https://raw.githubusercontent.com/alvadiaz2008-byte/bold-mint-flora-garden/refs/heads/main/imagenes/Birrete%2001.webp"
     ],
-    "featured": false,
+    "featured": true,
     "variants": [
       { "size": "Sin talla", "color": "Camuflaje", "hex": "#B3C297", "stock": 54 }
     ]
@@ -233,7 +233,7 @@
     "images": [
       "https://raw.githubusercontent.com/alvadiaz2008-byte/bold-mint-flora-garden/refs/heads/main/imagenes/Cinturon%20tactico.webp"
     ],
-    "featured": false,
+    "featured": true,
     "variants": [
       { "size": "Sin talla", "color": "Coyote Brawn", "hex": "#81613C", "stock": 5 }
     ]
