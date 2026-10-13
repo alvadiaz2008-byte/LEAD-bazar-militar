@@ -1,4 +1,4 @@
-# ATLAS TÁCTICO
+# LEAD Bazar Militar
 
 Catálogo web de ropa y equipo táctico para personal militar. Precios en soles (PEN).
 
