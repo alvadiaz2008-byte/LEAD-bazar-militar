@@ -28,7 +28,12 @@ jobs:
           cp index.html _site/index.html
           cp .nojekyll _site/.nojekyll
           cp web/styles.css web/app.js web/map.js web/products.js web/catalog.json _site/web/
-          cp public/favicon.webp public/logo.webp public/og.jpg _site/public/
+          # Iconos: prioriza .webp (los archivos actuales); .png solo si existiera
+          for f in favicon.webp logo.webp og.jpg favicon.png logo.png; do
+            if [ -f "public/$f" ]; then
+              cp "public/$f" _site/public/
+            fi
+          done
           cp -r imagenes/. _site/imagenes/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
