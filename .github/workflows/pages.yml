@@ -27,8 +27,7 @@ jobs:
           mkdir -p _site/web _site/public _site/imagenes
           cp index.html _site/index.html
           cp .nojekyll _site/.nojekyll
-          cp web/styles.css web/app.js web/map.js web/products.js web/catalog.json _site/web/
-          # Iconos: prioriza .webp (los archivos actuales); .png solo si existiera
+          cp web/styles.css web/app.js web/app.part1.js web/app.part2.js web/map.js web/products.js web/catalog.json _site/web/
           for f in favicon.webp logo.webp og.jpg favicon.png logo.png; do
             if [ -f "public/$f" ]; then
               cp "public/$f" _site/public/
