@@ -1,18 +1,20 @@
 (function () {
-  function loadText(url) {
-    return fetch(url, { cache: "no-store" }).then(function (r) {
-      if (!r.ok) throw new Error(url);
+  function loadText(u) {
+    return fetch(u, { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error(u);
       return r.text();
     });
   }
   Promise.all([
-    loadText("web/app.part1.js"),
-    loadText("web/app.part2.js"),
+    loadText("web/app.c0.js"),
+    loadText("web/app.c1.js"),
+    loadText("web/app.c2.js"),
+    loadText("web/app.c3.js"),
+    loadText("web/app.c4.js"),
   ])
     .then(function (parts) {
-      var code = parts[0] + parts[1];
       var s = document.createElement("script");
-      s.textContent = code;
+      s.textContent = parts.join("");
       document.body.appendChild(s);
     })
     .catch(function (e) {
