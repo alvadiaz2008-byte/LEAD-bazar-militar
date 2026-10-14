@@ -37,6 +37,27 @@ p { margin: 0; text-wrap: pretty; }
 button:not(:disabled), [role="button"] { cursor: pointer; }
 ::selection { background: color-mix(in oklab, var(--primary) 45%, transparent); }
 
+/* Movil: sin cuadro de seleccion / highlight al tocar botones y enlaces */
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+a, button, .btn, .chip, .choice, .size, .cat-card, .card, .icon-btn, .ghost-btn,
+.menu-btn, .nav-links a, .mobile-menu a, .thumbs button, .lead-toast-actions .btn,
+[role="button"], [data-view], [data-edit], [data-del], [data-cart-del],
+[data-cart-close], [data-drawer-close], [data-preview-send], [data-lead-btn] {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+/* Si permitir seleccionar texto en campos y parrafos largos */
+input, textarea, select, .field label, .notice, .lead-toast-msg, p, dd {
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-touch-callout: default;
+}
+
 .wrap { max-width: 72rem; margin: 0 auto; padding: 0 1rem; }
 .site { min-height: 100svh; display: flex; flex-direction: column; }
 main { flex: 1; }
